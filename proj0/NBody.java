@@ -51,7 +51,7 @@ public class NBody {
 			}
 			StdDraw.picture(0, 0, "images/starfield.jpg");
 			for (int i = 0; i < planets.length; i++) {
-				planets[i].update(time, xForces[i], yForces[i]);
+				planets[i].update(dt, xForces[i], yForces[i]);
 			}
 			for (Planet p : planets) {
 				p.draw();
@@ -60,7 +60,7 @@ public class NBody {
 			StdDraw.pause(10);
 			time += dt;
 		}
-		
+
 		StdOut.printf("%d\n", planets.length);
 		StdOut.printf("%.2e\n", radius);
 		for (int i = 0; i < planets.length; i++) {
