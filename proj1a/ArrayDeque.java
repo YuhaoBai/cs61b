@@ -1,6 +1,4 @@
-import java.time.chrono.MinguoChronology;
-
-public class ArrayDeque <T> {
+public class ArrayDeque<T> {
 
     private T[] items;
     private int size;
@@ -140,40 +138,5 @@ public class ArrayDeque <T> {
         items = array;
         front = capacity - 1;
         back = size();
-    }
-
-    public static void main(String[] args) {
-        ArrayDeque<Integer> a = new ArrayDeque<>();
-        for (int i = 16; i > 0; i--) {
-            a.addFirst(i );
-        }
-        a.printArray();
-        System.out.println("\n");
-        a.printDeque();
-        System.out.println("\n" + a.checkFull());
-
-        for (int i = 0; i < 16; i++ ) {
-            System.out.println(a.get(i));
-        }
-
-        /*
-        for (int i = 0; i < 8; i++) {
-            a.removeFirst();
-        }
-        a.printDeque();
-        a.printArray();
-
-
-        for (int i = 0; i < 4; i++) {
-            a.removeLast();
-        }
-        a.removeFirst();
-        a.printDeque();
-        //System.out.println("\n");
-        a.printArray();
-        // a.removeFirst();
-        System.out.println("\n" + a.lowUR());
-
-         */
     }
 }
